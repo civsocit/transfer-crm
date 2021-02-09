@@ -12,7 +12,7 @@ import serve from "koa-static";
 export const Middleware = () => {
   return compose([
     logger(),
-    serve('./public/'),
+    serve('./web-ui/build/'),
     helmet(), // reset HTTP headers (e.g. remove x-powered-by)
     cors({
         origin: '*',

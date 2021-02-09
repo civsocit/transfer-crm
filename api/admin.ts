@@ -14,7 +14,7 @@ const LocalStrategy = passportLocal.Strategy;
 const router = new Router();
 
 router.get('*', function(ctx) {
-  ctx.body = fs.readFileSync(path.resolve(path.join('public', 'index.html')), 'utf8')
+  ctx.body = fs.readFileSync(path.resolve(path.join('web-ui', 'build', 'index.html')), 'utf8')
 });
 
 const cookieExtractor = (req) => {
